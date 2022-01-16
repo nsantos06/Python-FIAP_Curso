@@ -7,7 +7,11 @@ def perguntar():
               "<S> para sair.\n").upper()
 
 def inserir(dicionario):
-    dicionario[input("Digite o nome:").upper()] = [input("Digite o login:").upper(),
+    dicionario[int(input("Digite o Código do Lançamento:"))] = [
+                                                 input("Digite o nivel do usuário:").upper(),
+                                                 input("Digite a hora do Login:"),
+                                                 input("Digite o nome:").upper(),
+                                                 input("Digite o login:").upper(),
                                                  input("Digite a data:"),
                                                  input("Digite a ultima estação a ser acessada:").upper()
                                                  ]
@@ -32,5 +36,5 @@ def excluir(dicionario, chave):
 def listar(dicionario):
     for chave, valor in dicionario.items():
         print("Objeto..:")
-        print("Login: ", chave)
+        print("Código do Lançamento: ", chave)
         print("Dados: ", valor)
